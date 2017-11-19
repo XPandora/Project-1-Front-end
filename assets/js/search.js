@@ -1,4 +1,4 @@
-new Vue({
+var penal = new Vue({
     el: '#search',
     data: {
         searchString: "",
