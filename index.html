@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vue</title>
-</head>
-<body>
+	<title>Reddit</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<div class="header2">
+		<img src="assets/css/logo2.png" width="380" height="100"/>
+
+	<div class="header1">
+		<img src="assets/css/logo1.jpg" width="400" height="120"/>
+	</div>
+</head>
+<body>
 	<div id="main">
 		<div class="container">
 			<subreddit name="politics"></subreddit>
 			<subreddit name="movies"></subreddit>
 			<subreddit name="sports"></subreddit>
 			<subreddit name="gaming"></subreddit>
+			<subreddit name="aww"></subreddit>
 			<subreddit name="books"></subreddit>
-			<subreddit name="photography"></subreddit>
 		</div>
 
 	</div>
@@ -73,38 +79,19 @@
 		<link href="assets/css/search.css" rel="stylesheet" type="text/css" />
 
     <div class="bar">
-
         <input type="text" v-model="searchString" placeholder="Enter your search terms" />
     </div>
+
+		<div class="search">
+		<ul>
+			 <li v-for="article in filteredArticles">
+					 <a v-bind:href="article.url"><p>{{article.title}}</p></a>
+			 </li>
+	 </ul>
+ 	</div>
 	</form>
 
 
-<script>
-	var demo = new Vue({
-    el: '#search',
-    data: {
-        searchString: "",
-    },
-    computed: {
-        filteredArticles: function () {
-            var articles_array = this.articles,
-                searchString = this.searchString;
-
-            if(!searchString){
-                return articles_array;
-            }
-
-            searchString = searchString.trim().toLowerCase();
-
-            articles_array = articles_array.filter(function(item){
-                if(item.title.toLowerCase().indexOf(searchString) !== -1){
-                    return item;
-                }
-            })
-            return articles_array;;
-        }
-    }
-});
-</script>
+<script src="assets/js/search.js">	</script>
 </body>
 </html>

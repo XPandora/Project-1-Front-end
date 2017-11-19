@@ -18,9 +18,20 @@ html{
     background-color: #f9f9f9;
 }
 
+.header2 img{
+    position:absolute;
+    left:130px;
+    top:0px;
+}
+
+.header1 img{
+    position:absolute;
+    left:550px;
+    top:0px;
+}
 .container{
     padding: 27px 20px;
-    margin: 100px auto 50px;
+    margin: 120px auto 100px;
     max-width: 1250px;
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +113,7 @@ html{
 
     .container{
         justify-content: center;
-        margin: 30px 30px 50px 30px;
+        margin: 0px 30px 50px 30px;
     }
 }
 

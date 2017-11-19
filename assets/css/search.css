@@ -34,3 +34,26 @@
     outline: none;
     text-indent: 40px;
 }
+.search ul{
+    list-style: none;
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    position: absolute;
+    right:150px;
+    top:80px;
+    background-color: #ffffff;
+}
+
+.search ul li{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.search ul li p{
+    margin-left: 20px;
+    font-weight: 550;
+    padding-top: 12px;
+    color:#6e7a7f;
+}
